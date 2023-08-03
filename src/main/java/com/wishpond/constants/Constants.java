@@ -1,4 +1,4 @@
-package com.learnautomation.constants;
+package com.wishpond.constants;
 
 public interface Constants 
 {

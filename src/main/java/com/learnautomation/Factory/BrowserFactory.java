@@ -2,9 +2,18 @@ package com.learnautomation.Factory;
 
 import java.time.Duration;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
+import org.openqa.selenium.devtools.v110.network.Network;
+import org.openqa.selenium.devtools.v110.network.model.Headers;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -26,8 +35,17 @@ public class BrowserFactory {
 		if(browsername.equalsIgnoreCase("chrome") || browsername.equalsIgnoreCase("GC") || browsername.equalsIgnoreCase("Google Chrome"))
 				{
 			        
-			 ChromeOptions options = new ChromeOptions();
-			    driver = new ChromeDriver();
+			 ChromeOptions opt = new ChromeOptions();
+			 opt.addArguments("--disable-notifications");
+			    driver = new ChromeDriver(opt);
+			    DevTools chromeDevTools=((HasDevTools) driver).getDevTools();
+			    chromeDevTools.createSession();
+			    chromeDevTools.send(Network.enable(Optional.of(0), Optional.of(0), Optional.of(0)));
+			    Map<String, Object> header = new HashMap<>();
+			    String basicAuth ="Basic " + new String(new Base64().encode(String.format("%s:%s", "wishpond", "suchwow").getBytes()));
+			    header.put("Authorization", basicAuth);
+			    chromeDevTools.send(Network.setExtraHTTPHeaders(new Headers(header)));
+			    
 				}else if(browsername.equalsIgnoreCase("Edge") || (browsername.equalsIgnoreCase("Microsoft Edge")))
 						
 				{

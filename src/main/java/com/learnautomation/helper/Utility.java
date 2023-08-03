@@ -34,7 +34,7 @@ public class Utility {
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].setAttribute('style','background:yellow; border : 2px solid red');", element);
-		waitforseconds(3);
+		waitforseconds(2);
 		js.executeScript("arguments[0].setAttribute('style','border : 2px solid white');", element);
 		return element;
 	}

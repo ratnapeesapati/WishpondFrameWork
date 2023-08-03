@@ -12,7 +12,14 @@
  
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.learnautomation.testcases.LoginTest"/>
+      <class name="testcases2.TC01_verifyURL"/>
+      <class name="testcases2.TC02_SigninviaGmail"></class>
+      <class name="testcases2.TC03_SearchMerchant"></class>
+      <class name="testcases2.TC05_NavigationtoLeads"></class>
+      <class name="testcases2.TC06_CreateFolder"></class>
+      <class name="testcases2.TC07_CreateFoldernegative"></class>
+      <class name="testcases2.TC09_EmailAutomation"></class>
+     
     </classes>
   </test> 
 </suite> 

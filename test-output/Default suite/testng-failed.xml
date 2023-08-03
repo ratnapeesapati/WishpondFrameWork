@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.learnautomation.testcases.LoginTest">
+      <class name="testcases2.TC09_EmailAutomation">
         <methods>
-          <include name="loginToApp" invocation-numbers="0"/>
+          <include name="EmailAutomation" invocation-numbers="0"/>
           <include name="setupApplication"/>
         </methods>
-      </class> <!-- com.learnautomation.testcases.LoginTest -->
+      </class> <!-- testcases2.TC09_EmailAutomation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

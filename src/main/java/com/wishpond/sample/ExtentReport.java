@@ -1,4 +1,4 @@
-package com.learnautomation.sample;
+package com.wishpond.sample;
 
 import org.testng.annotations.Test;
 

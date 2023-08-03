@@ -18,7 +18,7 @@ public class BaseClass {
 		driver = BrowserFactory.startbrowser(ConfigReader.getProperty("browser"), ConfigReader.getProperty("url"));
 	}
 	
-	@AfterClass
+//	@AfterClass
 	public void teardown()
 	{
 		System.out.println("LOG:INFO - Running After Class -Terminating the session");

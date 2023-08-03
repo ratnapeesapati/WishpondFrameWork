@@ -12,7 +12,7 @@
  
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.learnautomation.testcases.SmokeTest"/>
+      <class name="testcases2.TC01_verifyURL"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
