@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases2.TC09_EmailAutomation">
+      <class name="testcases2.TC08_Plansubscription">
         <methods>
-          <include name="EmailAutomation" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="Plansubscription"/>
           <include name="setupApplication"/>
         </methods>
-      </class> <!-- testcases2.TC09_EmailAutomation -->
+      </class> <!-- testcases2.TC08_Plansubscription -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

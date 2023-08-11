@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.learnautomation.helper.Utility;
-import com.wp.staging.admin.pages.WPAdmin_Merchant;
+import com.wp.staging.admin.pages.Merchant_Login;
 
 public class Merresultspg2 {
 	
@@ -17,10 +17,10 @@ public WebDriver driver;
 	
 	By merchantresults = By.xpath("(//a[contains(@href,'admin/merchants')])[3]");
 	
-	public WPAdmin_Merchant merResults()
+	public Merchant_Login merResults()
 	{
 		Utility.WebElementwait(driver, merchantresults).click();
-		WPAdmin_Merchant merlink = new WPAdmin_Merchant(driver);
+		Merchant_Login merlink = new Merchant_Login(driver);
 		return merlink;
 	}
 	

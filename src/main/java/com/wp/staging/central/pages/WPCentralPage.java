@@ -38,7 +38,7 @@ public class WPCentralPage {
 	
    By viewMoreButton = By.xpath("//div[normalize-space()='View More']");
 	
-	
+	By searchByName = By.xpath("(//input[@placeholder='Search by Name'])[2]");
 	
   public Boolean merchantName()
 	{
@@ -104,6 +104,11 @@ public class WPCentralPage {
 	{
 		Utility.WebElementwait(driver, viewMoreButton).click();
 		
+	}
+	
+	public void searchByName()
+	{
+		Utility.WebElementwait(driver, searchByName).sendKeys("Welcome Mat for Amir story");
 	}
 	
 

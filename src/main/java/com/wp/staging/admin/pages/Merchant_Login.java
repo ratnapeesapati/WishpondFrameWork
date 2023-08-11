@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 import com.learnautomation.helper.Utility;
 
-public class WPAdmin_Merchant {
+public class Merchant_Login {
 	
 	public WebDriver driver;
 	
-	public WPAdmin_Merchant(WebDriver driver)
+	public Merchant_Login(WebDriver driver)
 	{
 		this.driver = driver;
 	}

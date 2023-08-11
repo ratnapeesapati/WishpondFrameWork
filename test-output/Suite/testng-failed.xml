@@ -5,13 +5,22 @@
     <listener class-name="com.learnautomation.listener.ExtentTestNGITestListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="merchantid" value="6"/>
     <classes>
       <class name="testcases2.TC03_SearchMerchant">
         <methods>
-          <include name="SearchMer"/>
+          <include name="searchMerchant" invocation-numbers="0"/>
+          <include name="teardown"/>
           <include name="setupApplication"/>
         </methods>
       </class> <!-- testcases2.TC03_SearchMerchant -->
+      <class name="testcases2.TC02_SigninviaGmail">
+        <methods>
+          <include name="SigninPage" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testcases2.TC02_SigninviaGmail -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

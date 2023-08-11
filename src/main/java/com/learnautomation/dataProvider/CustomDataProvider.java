@@ -14,5 +14,24 @@ public class CustomDataProvider {
 		return arr;
 		
 	}
-
+	
+	@DataProvider(name="Merchantid")
+	public static Object[][] test3()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("merchantid");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="PlanId")
+	public static Object[][] test4()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("PlanId");
+		return arr;
+		
+	}
+	
+	
 }

@@ -1,0 +1,49 @@
+package testcases2;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.learnautomation.Factory.BaseClass;
+import com.learnautomation.dataProvider.CustomDataProvider;
+import com.learnautomation.extra.pages.Merresultspg1;
+import com.learnautomation.extra.pages.Merresultspg2;
+import com.learnautomation.extra.pages.homepage;
+import com.wp.staging.admin.pages.GPwdPage;
+import com.wp.staging.admin.pages.GSigninPage;
+import com.wp.staging.admin.pages.Merchant_Login;
+import com.wp.staging.admin.pages.adminHomePage;
+import com.wp.staging.admin.pages.loginpage;
+import com.wp.staging.central.pages.WPCentralPage;
+
+@Test
+public class TC05_CreateFolder extends BaseClass {
+
+	WPCentralPage central;
+	
+	@Test(priority = 0)
+	public void CreateFolder()
+	{
+       central = new WPCentralPage(driver);
+        central.createFolderPopup();
+		Assert.assertTrue(central.folderPopupExists());
+		central.createFolder();
+		Boolean Foldersuccessmsg = central.folderSuccessMsg();
+		Assert.assertTrue(Foldersuccessmsg);
+	}
+	
+	@Test(priority = 1)
+	public void CreateFoldernegative()
+	{
+        central = new WPCentralPage(driver);
+		central.createFolderPopup();
+		central.createFolderNegative();
+		Assert.assertTrue(central.folderMsgExists());
+	}
+	
+	
+	
+	
+	
+	
+
+}

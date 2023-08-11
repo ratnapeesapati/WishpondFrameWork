@@ -10,16 +10,43 @@
  </listeners>
  
  
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="NavigationtoLeads">
+	  
+	 
     <classes>
       <class name="testcases2.TC01_verifyURL"/>
       <class name="testcases2.TC02_SigninviaGmail"></class>
-      <class name="testcases2.TC03_SearchMerchant"></class>
-      <class name="testcases2.TC05_NavigationtoLeads"></class>
-      <class name="testcases2.TC06_CreateFolder"></class>
-      <class name="testcases2.TC07_CreateFoldernegative"></class>
-      <class name="testcases2.TC09_EmailAutomation"></class>
+      <class name="testcases2.TC03_loginasMerchant"></class>
+      <class name="testcases2.TC04_NavigationtoLeads"></class>
+   
+    
      
     </classes>
-  </test> 
+    </test> 
+    
+    <test name="FolderCreation">
+    
+    <classes>
+		<class name="testcases2.TC02_SigninviaGmail"/>
+		<class name="testcases2.TC03_loginasMerchant"></class>
+		<class name="testcases2.TC05_CreateFolder"></class>
+		
+		
+	</classes>
+	
+	</test>
+	
+	<test name="EmailAutomation">
+		
+		<classes>
+		<class name="testcases2.TC02_SigninviaGmail"/>
+		<class name="testcases2.TC03_loginasMerchant"></class>
+		<class name="testcases2.TC07_EmailAutomation"></class>
+			
+		</classes>
+		
+		
+		
+	</test>
+    
 </suite> 

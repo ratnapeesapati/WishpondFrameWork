@@ -28,11 +28,11 @@ public class GPwdPage {
 		return status;
 	}
 	
-	public WPMerchantSearch gPwd(String password)
+	public adminHomePage gPwd(String password)
 	{
 		Utility.WebElementwait(driver, passwordField).sendKeys(password);
 		Utility.WebElementwait(driver, nextButton).click();
-		WPMerchantSearch adminhome = new WPMerchantSearch(driver);
+		adminHomePage adminhome = new adminHomePage(driver);
 		return adminhome;
 	}
 

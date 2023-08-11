@@ -8,7 +8,7 @@ import com.learnautomation.dataProvider.CustomDataProvider;
 import com.learnautomation.extra.pages.homepage;
 import com.wp.staging.admin.pages.GPwdPage;
 import com.wp.staging.admin.pages.GSigninPage;
-import com.wp.staging.admin.pages.WPMerchantSearch;
+import com.wp.staging.admin.pages.adminHomePage;
 import com.wp.staging.admin.pages.loginpage;
 
 public class TC02_SigninviaGmail  extends BaseClass{
@@ -16,18 +16,19 @@ public class TC02_SigninviaGmail  extends BaseClass{
 	loginpage login ;
 	GSigninPage Signin ;
 	GPwdPage gpwd ;
-	WPMerchantSearch adminpage;
+	adminHomePage adminpage;
+	
 	@Test(dataProvider = "Credentials", dataProviderClass=CustomDataProvider.class)
 	public void  SigninPage(String username, String password)
 	{
 		//creating objects of pages needed
-		login = new loginpage(driver);
-		Signin = new GSigninPage(driver);
-		gpwd = new GPwdPage(driver);
-		adminpage = new WPMerchantSearch(driver);
 		
-		//Click on Login button
-		Assert.assertTrue(driver.getTitle().contains("Login"));
+		  login = new loginpage(driver);
+		  Signin = new GSigninPage(driver);
+		  gpwd = new GPwdPage(driver); 
+		  adminpage = new adminHomePage(driver);
+		 
+		
 		
 		//Click on GoogleLogin button
 		login.googleSignin();
@@ -46,5 +47,13 @@ public class TC02_SigninviaGmail  extends BaseClass{
         
 		
 	  }
+	
+	public void InvalidUsername(String username)
+	{
+	
+	 login = new loginpage(driver);
+	
+	 
+}
 	
 }

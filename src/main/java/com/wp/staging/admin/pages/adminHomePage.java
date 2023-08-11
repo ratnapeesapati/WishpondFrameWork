@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 import com.learnautomation.helper.Utility;
 
-public class WPMerchantSearch {
+public class adminHomePage {
 	
 	public WebDriver driver;
 	
-	public WPMerchantSearch(WebDriver driver)
+	public adminHomePage(WebDriver driver)
 	{
 		this.driver = driver;
 	}
@@ -20,6 +20,8 @@ public class WPMerchantSearch {
 	
 	By wishpondLogo = By.xpath("//a[normalize-space()='Wishpond']");
 	
+	By newSubscription = By.xpath("(//a[contains(@href,'subscription')])[2]");
+	
 	public Boolean wishpondLogo()
 	{
 		Boolean status = Utility.WebElementwait(driver, wishpondLogo).isDisplayed();
@@ -28,11 +30,16 @@ public class WPMerchantSearch {
 	
 	
 	
-	public void searchMerchant()
+	public void searchMerchant(String merchantid)
 	{
-		Utility.WebElementwait(driver, searchBox).sendKeys("6");
+		Utility.WebElementwait(driver, searchBox).sendKeys(merchantid);
 		Utility.WebElementwait(driver, submit).click();
 		
+	}
+	
+	public void newSubscription()
+	{
+		Utility.WebElementwait(driver, newSubscription).click();
 	}
 	
 	

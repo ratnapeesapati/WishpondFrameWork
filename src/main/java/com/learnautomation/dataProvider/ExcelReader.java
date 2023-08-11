@@ -37,7 +37,6 @@ public class ExcelReader {
 		{
 			for(int j=0;j<columns;j++)
 			{
-				//arr[i][j] = wb.getSheet(SheetName).getRow(i).getCell(j).getStringCellValue();
 				
 				arr[i-1][j] = getData(SheetName,i,j);
 			
@@ -59,7 +58,7 @@ public class ExcelReader {
 		}
 		else if(cell.getCellType()==CellType.NUMERIC)
 		{
-			double data1 = cell.getNumericCellValue();
+			int data1 = (int) cell.getNumericCellValue();
 			data = String.valueOf(data1);
 		}
 		else if(cell.getCellType()== CellType.BOOLEAN)

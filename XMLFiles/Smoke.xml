@@ -12,7 +12,8 @@
  
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testcases2.TC01_verifyURL"/>
+      <class name="testcases2.TC02_SigninviaGmail"/>
+      <class name="testcases2.TC08_Plansubscription"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -7,11 +7,11 @@ import com.learnautomation.helper.Utility;
 
 public class loginpage {
 	
-	public WebDriver driver;
-	
-	public loginpage(WebDriver driver)
+	protected  WebDriver driver;
+
+	public loginpage(WebDriver loginpagedriver)
 	{
-		this.driver = driver;
+		this.driver = loginpagedriver;
 	}
 	
 	By googleSignin = By.xpath("(//div[contains(@class,'logo')])[1]");
