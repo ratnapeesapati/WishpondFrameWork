@@ -8,22 +8,22 @@ import com.learnautomation.dataProvider.CustomDataProvider;
 import com.learnautomation.extra.pages.homepage;
 import com.wp.staging.admin.pages.GSigninPage;
 import com.wp.staging.admin.pages.Merchant_Login;
-import com.wp.staging.admin.pages.adminHomePage;
+import com.wp.staging.admin.pages.Adminhomepage;
 import com.wp.staging.admin.pages.loginpage;
 import com.wp.staging.central.pages.WPCentralPage;
 
 public class TC03_loginasMerchant  extends BaseClass{
 
-	adminHomePage admin;
+	Adminhomepage admin;
 	Merchant_Login results;
 	WPCentralPage Central;
 	
-	@Test(priority=1,dataProvider = "Merchantid", dataProviderClass=CustomDataProvider.class)
+	@Test(priority=1,dataProvider = "MerchantId", dataProviderClass=CustomDataProvider.class)
 	//Searching of Merchant
 	public void searchMerchant(String merchantid)
 	{
 	
-		admin = new adminHomePage(driver);
+		admin = new Adminhomepage(driver);
 		results = new Merchant_Login(driver);
 		Central = new WPCentralPage(driver);
 		admin.searchMerchant(merchantid);

@@ -40,6 +40,9 @@ public class WPCentralPage {
 	
 	By searchByName = By.xpath("(//input[@placeholder='Search by Name'])[2]");
 	
+	
+	
+	
   public Boolean merchantName()
 	{
 		Boolean successfullogin = Utility.WebElementwait(driver, merchantName).isDisplayed();
@@ -106,9 +109,9 @@ public class WPCentralPage {
 		
 	}
 	
-	public void searchByName()
+	public void searchByName(String campaignName)
 	{
-		Utility.WebElementwait(driver, searchByName).sendKeys("Welcome Mat for Amir story");
+		Utility.WebElementwait(driver, searchByName).sendKeys(campaignName);
 	}
 	
 

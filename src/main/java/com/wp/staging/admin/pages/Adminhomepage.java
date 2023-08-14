@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 import com.learnautomation.helper.Utility;
 
-public class adminHomePage {
+public class Adminhomepage {
 	
 	public WebDriver driver;
 	
-	public adminHomePage(WebDriver driver)
+	public Adminhomepage(WebDriver driver)
 	{
 		this.driver = driver;
 	}
@@ -22,13 +22,13 @@ public class adminHomePage {
 	
 	By newSubscription = By.xpath("(//a[contains(@href,'subscription')])[2]");
 	
+	By doorman = By.xpath("//a[normalize-space()='Doorman']");
+	
 	public Boolean wishpondLogo()
 	{
 		Boolean status = Utility.WebElementwait(driver, wishpondLogo).isDisplayed();
 		return status;
 	}
-	
-	
 	
 	public void searchMerchant(String merchantid)
 	{
@@ -40,6 +40,11 @@ public class adminHomePage {
 	public void newSubscription()
 	{
 		Utility.WebElementwait(driver, newSubscription).click();
+	}
+	
+	public void doorman()
+	{
+		Utility.WebElementwait(driver, doorman).click();
 	}
 	
 	

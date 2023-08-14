@@ -28,11 +28,11 @@ public class GPwdPage {
 		return status;
 	}
 	
-	public adminHomePage gPwd(String password)
+	public Adminhomepage gPwd(String password)
 	{
 		Utility.WebElementwait(driver, passwordField).sendKeys(password);
 		Utility.WebElementwait(driver, nextButton).click();
-		adminHomePage adminhome = new adminHomePage(driver);
+		Adminhomepage adminhome = new Adminhomepage(driver);
 		return adminhome;
 	}
 

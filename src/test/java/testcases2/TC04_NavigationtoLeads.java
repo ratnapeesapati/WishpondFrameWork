@@ -12,7 +12,7 @@ import com.learnautomation.helper.Utility;
 import com.wp.staging.admin.pages.GPwdPage;
 import com.wp.staging.admin.pages.GSigninPage;
 import com.wp.staging.admin.pages.Merchant_Login;
-import com.wp.staging.admin.pages.adminHomePage;
+import com.wp.staging.admin.pages.Adminhomepage;
 import com.wp.staging.admin.pages.loginpage;
 import com.wp.staging.central.pages.WPCentralPage;
 import com.wp.staging.central.pages.WPLeadsPage;

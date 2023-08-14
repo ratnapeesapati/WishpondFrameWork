@@ -4,6 +4,7 @@ package com.wp.staging.admin.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -38,8 +39,20 @@ public class newSubscription {
     	}
     	
     }
+
+    JavascriptExecutor js = (JavascriptExecutor)driver;
     
-    Utility.WebElementwait(driver, datePicker).click();
+    WebElement datePicker1 = Utility.WebElementwait(driver, datePicker);
+    js.executeScript("arguments[0].scrollIntoView(true)", datePicker1);
+   
+  Utility.JSclick(driver, datePicker);
+    
+    
+
+   // datePicker1.sendKeys("2023-08-25");
+   
+    
+  //  Utility.WebElementwait(driver, datePicker).sendKeys("2023/08/11");
     
    
     

@@ -16,10 +16,18 @@ public class WPDetailedCampaigns {
 	
 	By automationLink = By.xpath("(//a[contains(@class,'create_rule')])[1]");
 	
+	By newsletterLink = By.xpath("//a[contains(@class,'newsletter')]");
+	
+	
 	public void automationClick()
 	{
 	
 		Utility.JSclick(driver, automationLink);
+	}
+	
+	public void newsletterLink()
+	{
+		Utility.JSclick(driver, newsletterLink);
 	}
 
 

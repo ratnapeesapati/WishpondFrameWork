@@ -8,7 +8,7 @@ import com.learnautomation.dataProvider.CustomDataProvider;
 import com.learnautomation.extra.pages.homepage;
 import com.wp.staging.admin.pages.GPwdPage;
 import com.wp.staging.admin.pages.GSigninPage;
-import com.wp.staging.admin.pages.adminHomePage;
+import com.wp.staging.admin.pages.Adminhomepage;
 import com.wp.staging.admin.pages.loginpage;
 
 public class TC02_SigninviaGmail  extends BaseClass{
@@ -16,7 +16,7 @@ public class TC02_SigninviaGmail  extends BaseClass{
 	loginpage login ;
 	GSigninPage Signin ;
 	GPwdPage gpwd ;
-	adminHomePage adminpage;
+	Adminhomepage adminpage;
 	
 	@Test(dataProvider = "Credentials", dataProviderClass=CustomDataProvider.class)
 	public void  SigninPage(String username, String password)
@@ -26,7 +26,7 @@ public class TC02_SigninviaGmail  extends BaseClass{
 		  login = new loginpage(driver);
 		  Signin = new GSigninPage(driver);
 		  gpwd = new GPwdPage(driver); 
-		  adminpage = new adminHomePage(driver);
+		  adminpage = new Adminhomepage(driver);
 		 
 		
 		

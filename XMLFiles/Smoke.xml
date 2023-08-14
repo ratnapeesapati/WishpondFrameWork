@@ -10,10 +10,15 @@
  </listeners>
  
  
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Test1">
     <classes>
       <class name="testcases2.TC02_SigninviaGmail"/>
-      <class name="testcases2.TC08_Plansubscription"></class>
+      <class name="testcases2.TC03_loginasMerchant"></class>
+      <class name="testcases2.TC10_SearchEditCampaign"></class>
     </classes>
   </test> <!-- Test -->
+  
+ 
+  
+  
 </suite> <!-- Suite -->
