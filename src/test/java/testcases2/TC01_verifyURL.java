@@ -12,6 +12,7 @@ public class TC01_verifyURL  extends BaseClass{
 	{
 		Assert.assertTrue(driver.getCurrentUrl().contains("staging"));
 		System.out.println("User is in Staging Wishpond Homepage");
+		System.out.println("TC executed successfully");
 	}
 	
 	
