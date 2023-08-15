@@ -40,6 +40,8 @@ public class WPCentralPage {
 	
 	By searchByName = By.xpath("(//input[@placeholder='Search by Name'])[2]");
 	
+	By campaignResult = By.xpath("(//a[contains(@href,'marketing_campaigns')])[2]");
+	
 	
 	
 	
@@ -52,10 +54,16 @@ public class WPCentralPage {
 	
 	public void  returnToAdmin()
 	{
+        Utility.WebElementwait(driver, merchantUsername).click();
 		Utility.WebElementwait(driver, returntoAdminlink).click();
 	
 	}
 	
+	public String campaignResult()
+	{
+		String text = Utility.WebElementwait(driver, campaignResult).getAttribute("innerHTML");
+		return text;
+	}
 	public WPLeadsPage leadsPage()
 	{
 		Utility.WebElementwait(driver, leadsLink).click();

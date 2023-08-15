@@ -1,24 +1,11 @@
 package testcases2;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
 
-import org.apache.commons.codec.binary.Base64;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v110.network.Network;
-import org.openqa.selenium.devtools.v110.network.model.Headers;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.learnautomation.Factory.BaseClass;
 import com.learnautomation.dataProvider.CustomDataProvider;
-import com.wp.staging.admin.pages.GPwdPage;
-import com.wp.staging.admin.pages.GSigninPage;
-import com.wp.staging.admin.pages.Merchant_Login;
-import com.wp.staging.admin.pages.Adminhomepage;
-import com.wp.staging.admin.pages.loginpage;
 import com.wp.staging.central.pages.WPCentralPage;
 
 @Test()
@@ -43,11 +30,19 @@ public class TC10_SearchEditCampaign extends BaseClass{
 	@Test(priority=1, dataProvider = "Campaign", dataProviderClass=CustomDataProvider.class)
 	public void searchCampaign1(String campaignName)
 	{
+	 central.searchByName(campaignName);
+	}
+	
+	@Test(priority=2)
+	public void campaignResult()
+	{
+		String actualcampaign1 = central.campaignResult();
+		String expectedcampaign1 = "Harika WS";
+		System.out.println(actualcampaign1);
+	//	Assert.assertEquals(actualcampaign1, expectedcampaign1);
 		
-      central.searchByName(campaignName);
-	    
-
-}
+		
+	}
 
 
 }
