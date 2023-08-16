@@ -50,14 +50,14 @@
 	</test>
 	
 	
-	 
-  <test thread-count="5" name="Test">
+<test thread-count="5" name="Test">
     <classes>
       <class name="testcases2.TC02_SigninviaGmail"/>
       <class name="testcases2.TC13_SearchMerchant"></class>
       <class name="testcases2.TC12_Doorman"></class>
     </classes>
   </test> <!-- Test -->
+  
   
    
   <test thread-count="5" name="Test1">
