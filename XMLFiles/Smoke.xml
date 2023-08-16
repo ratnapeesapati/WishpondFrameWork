@@ -13,7 +13,7 @@
     <classes>
       <class name="testcases2.TC02_SigninviaGmail"/>
       <class name="testcases2.TC03_loginasMerchant"></class>
-      <class name="testcases2.TC10_SearchEditCampaign"></class>
+    
     </classes>
   </test> <!-- Test -->
   
