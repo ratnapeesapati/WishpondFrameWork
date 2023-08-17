@@ -10,7 +10,7 @@ public class TC13_SearchMerchant extends BaseClass {
 	
 	Adminhomepage adminHome;
 	
-	@Test(priority=1,dataProvider = "Merchantid", dataProviderClass=CustomDataProvider.class)
+	@Test(priority=1,dataProvider = "MerchantId", dataProviderClass=CustomDataProvider.class)
 	public void searchMerchant(String merchantid)
 	{
 		adminHome = new Adminhomepage(driver);
