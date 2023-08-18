@@ -9,21 +9,18 @@
 	 
  </listeners>
  
- 
   <test thread-count="5" name="NavigationtoLeads">
 	  
-	 
     <classes>
       <class name="testcases2.TC01_verifyURL"/>
       <class name="testcases2.TC02_SigninviaGmail"></class>
       <class name="testcases2.TC03_loginasMerchant"></class>
       <class name="testcases2.TC04_NavigationtoLeads"></class>
-   
-    
-     
     </classes>
-    </test> 
     
+    </test> 
+ 
+ 
     <test name="FolderCreation">
     
     <classes>
@@ -49,26 +46,7 @@
 		
 	</test>
 	
-	
-<test thread-count="5" name="Test">
-    <classes>
-      <class name="testcases2.TC02_SigninviaGmail"/>
-      <class name="testcases2.TC13_SearchMerchant"></class>
-      <class name="testcases2.TC12_Doorman"></class>
-    </classes>
-  </test> <!-- Test -->
-  
-  
-   
-  <test thread-count="5" name="Test1">
-    <classes>
-      <class name="testcases2.TC02_SigninviaGmail"/>
-      <class name="testcases2.TC03_loginasMerchant"></class>
-      <class name="testcases2.TC16_ReturntoAdmin"></class>
-     
-    </classes>
-  </test> <!-- Test -->
-  
+
   
     
 </suite> 

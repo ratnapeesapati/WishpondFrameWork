@@ -20,13 +20,13 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import com.learnautomation.dataProvider.ConfigReader;
 
-public class BrowserFactory{
+public class BrowserFactory2 extends BaseClass {
 	
-	
-	  static WebDriver driver;
-	  
-	  public static WebDriver getDriver() { return driver; }
-	 
+	/*
+	 * static WebDriver driver;
+	 * 
+	 * public static WebDriver getDriver() { return driver; }
+	 */
 	public static WebDriver startbrowser(String browsername, String applicationurl)
 	{
 		
