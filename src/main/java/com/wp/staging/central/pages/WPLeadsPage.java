@@ -50,6 +50,15 @@ public class WPLeadsPage {
 	
 	By leadProfile = By.xpath("//a[normalize-space()='Profile']");
 	
+	By searchLead = By.xpath("//input[@placeholder='Search by email']");
+	
+	By leadResult = By.xpath("//a[contains(@href,'central/leads')]/span");
+	
+	By leadDeletecheckbox = By.xpath("(//input[@type='checkbox'])[2]");
+	
+	By actionsDropDown = By.xpath("(//i[contains(@class,'caret-down')])[1]");
+	
+	By deleteLead = By.xpath("(//li[contains(@uib-tooltip,'delete')]/a)[1]");
 	
 	
 	
@@ -98,6 +107,24 @@ public class WPLeadsPage {
 		return lastname;
 	}
 	
+	public void leadSearch(String leademail)
+	{
+		Utility.WebElementwait(driver, searchLead).sendKeys(leademail);
+	}
+	
+	public String leadResult()
+	{
+		String text = Utility.WebDriverWait(driver, leadResult).getText();
+		return text;
+	}
+	
+	public void leadDelete()
+	{
+       Utility.JSclick(driver, leadDeletecheckbox);
+		Utility.JSclick(driver, actionsDropDown);
+		Utility.JSclick(driver, deleteLead);
+		driver.switchTo().alert().accept();
+	}
 	}
 
 

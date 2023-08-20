@@ -16,7 +16,8 @@
       <class name="testcases2.TC01_verifyURL"/>
       <class name="testcases2.TC02_SigninviaGmail"></class>
       <class name="testcases2.TC03_loginasMerchant"></class>
-      <class name="testcases2.TC04_Leads"></class>
+      <class name="testcases2.TC04a_LeadAddition"></class>
+      <class name="testcases2.TC04b_LeadDeletion"></class>
       
    
     
