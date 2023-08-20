@@ -33,16 +33,20 @@ public class TC10_SearchEditCampaign extends BaseClass{
 	 central.searchByName(campaignName);
 	}
 	
-	@Test(priority=2)
-	public void campaignResult()
-	{
-		String actualcampaign1 = central.campaignResult();
+	
+	
+	@Test(priority=2, dependsOnMethods = {"searchCampaign1"})
+	
+	  public void campaignResult()
+	{ 
+		String actualcampaign1 = central.campaignResult(); 
 		String expectedcampaign1 = "Harika WS";
-		System.out.println(actualcampaign1);
-	//	Assert.assertEquals(actualcampaign1, expectedcampaign1);
-		
-		
-	}
+	  System.out.println(actualcampaign1);
+	  // Assert.assertEquals(actualcampaign1,expectedcampaign1);
+	  
+	  
+	  }
+	 
 
 
 }

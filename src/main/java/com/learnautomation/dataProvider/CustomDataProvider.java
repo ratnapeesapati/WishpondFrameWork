@@ -52,5 +52,14 @@ public class CustomDataProvider {
 		
 	}
 	
+	@DataProvider(name="NewLead")
+	public static Object[][] test6()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("NewLead");
+		return arr;
+		
+	}
+	
 	
 }
