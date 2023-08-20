@@ -1,6 +1,7 @@
 package testcases2;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.learnautomation.Factory.BaseClass;
@@ -20,10 +21,15 @@ public class TC05_CreateFolder extends BaseClass {
 
 	WPCentralPage central;
 	
+	@BeforeTest
+	public void objects()
+	{
+	       central = new WPCentralPage(driver);
+	}
+	
 	@Test(priority = 0)
 	public void CreateFolder()
 	{
-       central = new WPCentralPage(driver);
         central.createFolderPopup();
 		Assert.assertTrue(central.folderPopupExists());
 		central.createFolder();
@@ -34,7 +40,6 @@ public class TC05_CreateFolder extends BaseClass {
 	@Test(priority = 1)
 	public void CreateFoldernegative()
 	{
-        central = new WPCentralPage(driver);
 		central.createFolderPopup();
 		central.createFolderNegative();
 		Assert.assertTrue(central.folderMsgExists());

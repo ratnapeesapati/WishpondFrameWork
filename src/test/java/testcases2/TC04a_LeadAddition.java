@@ -1,6 +1,7 @@
 package testcases2;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.learnautomation.Factory.BaseClass;
@@ -18,18 +19,23 @@ import com.wp.staging.central.pages.WPCentralPage;
 import com.wp.staging.central.pages.WPLeadsPage;
 
 
-public class TC04_Leads extends BaseClass {
+public class TC04a_LeadAddition extends BaseClass {
 	
 
 	WPCentralPage Central;
 	WPLeadsPage leads;
 	
+	@BeforeTest
+	public void leadobjects()
+	{
+		Central = new WPCentralPage(driver);
+		leads = new WPLeadsPage(driver);
+	}
+	
 	@Test(priority = 0)
 	public void  leadspage()
 	{
-	   Central = new WPCentralPage(driver);
-		leads = new WPLeadsPage(driver);
-		Central.leadsPage();
+	    Central.leadsPage();
 		Boolean Leadspagecheck = leads.leadsPageVerify();
 		Assert.assertTrue(Leadspagecheck);
 	}
@@ -37,28 +43,32 @@ public class TC04_Leads extends BaseClass {
 	@Test(priority = 1, dataProvider = "NewLead", dataProviderClass = CustomDataProvider.class)
 	public void createLead(String email, String leadscore, String firstname, String lastname)
 	{
-		leads = new WPLeadsPage(driver);
 		leads.addNewLeadlink();
 		Assert.assertTrue(driver.getCurrentUrl().contains("leads/new"));
 		leads.addNewLead(email, leadscore, firstname, lastname);
 		String actualemail = leads.newLeadvalidate();
-		System.out.println(actualemail);
-		String expectedemail = "ratnatest2@gmail.com";
-		Assert.assertEquals(actualemail,expectedemail);
+	    Assert.assertTrue(actualemail.equalsIgnoreCase(email));
+	    leads.leadProfile();
+		String actualfirstname = leads.leadFirstName();
+		Assert.assertTrue(actualfirstname.equalsIgnoreCase(firstname));
+		String actuallastname = leads.leadLastName();
+		Assert.assertTrue(actuallastname.equalsIgnoreCase(lastname));
 	}
-	
-	@Test(priority = 2)
-	public void leadProfile()
+
+
+	@Test(priority =2, dataProvider = "LeadSearch", dataProviderClass = CustomDataProvider.class)
+	public void leadSearch(String email)
 	{
-		leads = new WPLeadsPage(driver);
-		leads.leadProfile();
-		String firstname = leads.leadFirstName();
-		Assert.assertEquals(firstname, "Ratna");
-		String lastname = leads.leadLastName();
-		Assert.assertEquals(lastname, "Test");
+		leads.leadSearch(email);
+	    String leadresult = leads.leadResult();
+		Assert.assertTrue(leadresult.equalsIgnoreCase(email));
+		
 	}
-
 	
-	
-
+//	@Test(priority=3)
+	public void leadDelete()
+	{
+		 leads.leadDelete();
+	}
 }
+
