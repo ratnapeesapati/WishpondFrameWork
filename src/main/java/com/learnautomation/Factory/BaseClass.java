@@ -21,7 +21,7 @@ public class BaseClass {
 		driver = BrowserFactory.startbrowser(ConfigReader.getProperty("browser"), ConfigReader.getProperty("url"));
 	}
 	
-   // @AfterTest
+   @AfterTest
 	public void teardown()
 	{
 	    driver.quit();

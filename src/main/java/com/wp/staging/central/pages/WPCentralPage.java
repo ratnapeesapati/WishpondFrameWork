@@ -1,7 +1,9 @@
 package com.wp.staging.central.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.learnautomation.helper.Utility;
 
@@ -40,7 +42,7 @@ public class WPCentralPage {
 	
 	By searchByName = By.xpath("(//input[@placeholder='Search by Name'])[2]");
 	
-	By campaignResult = By.xpath("(//a[contains(@href,'marketing_campaigns')])[2]");
+	By campaignResult = By.xpath("(//a[@class='ng-binding ng-scope'])[1]");
 	
 	
 	
@@ -61,8 +63,9 @@ public class WPCentralPage {
 	
 	public String campaignResult()
 	{
-		String text = Utility.WebElementwait(driver, campaignResult).getAttribute("innerHTML");
-		return text;
+		WebElement CampaignResult = driver.findElement(campaignResult);
+          String text = CampaignResult.getText();
+	    return text;
 	}
 	public WPLeadsPage leadsPage()
 	{
