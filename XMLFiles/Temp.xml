@@ -9,17 +9,20 @@
 	 
  </listeners>
  
-  <test thread-count="5" name="SmokeTest">
+  <test thread-count="5" name="SmokeTest2">
 	  
-	 
-    <classes>
+   <classes>
       <class name="testcases2.TC01_verifyURL"/>
       <class name="testcases2.TC02_SigninviaGmail"></class>
       <class name="testcases2.TC03_loginasMerchant"></class>
-   
-    
+      <class name="testcases2.TC04a_LeadAddition"></class>
+      <class name="testcases2.TC04b_LeadDeletion"></class>
      
+     
+      
     </classes>
+   
+   
     </test> 
 	 
   

@@ -34,6 +34,9 @@ public class TC04b_LeadDeletion extends BaseClass {
 	public void leadDelete()
 	{
 		 leads.leadDelete();
-	}
+		 Assert.assertTrue(leads.leadDeleteCheck());
+    }
+	
+	
 
 }
