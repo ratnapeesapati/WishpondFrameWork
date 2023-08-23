@@ -9,18 +9,14 @@
 	 
  </listeners>
  
-  <test thread-count="5" name="SmokeTest2">
+  <test thread-count="5" name="Tempfile">
 	  
    <classes>
       <class name="testcases2.TC01_verifyURL"/>
       <class name="testcases2.TC02_SigninviaGmail"></class>
-      <class name="testcases2.TC03_loginasMerchant"></class>
-      <class name="testcases2.TC04a_LeadAddition"></class>
-      <class name="testcases2.TC04b_LeadDeletion"></class>
-     
-     
+      <class name="testcases2.TC03b_InvalidMerchant"></class>
       
-    </classes>
+   </classes>
    
    
     </test> 

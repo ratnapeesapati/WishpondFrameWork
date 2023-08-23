@@ -44,6 +44,8 @@ public class WPCentralPage {
 	
 	By campaignResult = By.xpath("(//a[@class='ng-binding ng-scope'])[1]");
 	
+	By invalidMerchant = By.xpath("//div[@class=' alert alert-info']");
+	
 	
 	
 	
@@ -52,6 +54,12 @@ public class WPCentralPage {
 		Boolean successfullogin = Utility.WebElementwait(driver, merchantName).isDisplayed();
 		return successfullogin;
 	}
+  
+  public String invalidMerchant()
+  {
+	String text =  Utility.WebElementwait(driver, invalidMerchant).getText();
+	return text;
+  }
 	
 	
 	public void  returnToAdmin()
