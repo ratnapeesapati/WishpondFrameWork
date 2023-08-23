@@ -24,6 +24,15 @@ public class CustomDataProvider {
 		  return arr;
 		  
 		  }
+	  
+	  @DataProvider(name="InvalidMerchantId")
+		
+	  public static Object[][] test2a() {
+	  
+	  Object arr[][] = ExcelReader.getDataFromSheet("invalidmerchantid"); 
+	  return arr;
+	  
+	  }
 		 
 	@DataProvider(name="PlanId")
 	public static Object[][] test3()

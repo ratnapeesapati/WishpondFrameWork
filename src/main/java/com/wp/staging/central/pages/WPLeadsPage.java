@@ -68,8 +68,9 @@ public class WPLeadsPage {
 	
 	By leadDelMsg = By.xpath("(//div[contains(@class,'success')]/i)[1]");
 	
-
+	By leadSettings = By.xpath("//div[@class='dropdown-toggle'])[1]");
 	
+	By leadEdit = By.xpath("//li[normalize-space()='Edit']");
 	
 	
 	public Boolean leadsPageVerify()
@@ -153,6 +154,12 @@ public class WPLeadsPage {
 	{
 		Boolean msg = Utility.WebElementwait(driver, duplicateLeadmsg).isDisplayed();
 		return msg;
+	}
+	
+	public void leadEdit()
+	{
+		Utility.JSclick(driver, leadSettings);
+		Utility.WebElementwait(driver, leadEdit).click();
 	}
 	}
 
