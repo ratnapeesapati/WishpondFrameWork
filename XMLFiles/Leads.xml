@@ -13,11 +13,11 @@
 	  
 	 
     <classes>
-      <class name="testcases2.TC01_verifyURL"/>
-      <class name="testcases2.TC02_SigninviaGmail"></class>
-      <class name="testcases2.TC03_loginasMerchant"></class>
-      <class name="testcases2.TC04a_LeadAddition"></class>
-      <class name="testcases2.TC04b_LeadDeletion"></class>
+      <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC04a_LeadAddition"></class>
+      <class name="WPTestcases.TC04b_LeadDeletion"></class>
      
       
     </classes>
@@ -28,10 +28,10 @@
 	  
 	 
     <classes>
-      <class name="testcases2.TC01_verifyURL"/>
-      <class name="testcases2.TC02_SigninviaGmail"></class>
-      <class name="testcases2.TC03_loginasMerchant"></class>
-      <class name="testcases2.TC04c_LeadDuplicate"></class>
+      <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC04c_LeadDuplicate"></class>
       
     </classes>
    

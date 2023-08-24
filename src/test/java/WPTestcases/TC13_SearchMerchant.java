@@ -1,4 +1,4 @@
-package testcases2;
+package WPTestcases;
 
 import org.testng.annotations.Test;
 

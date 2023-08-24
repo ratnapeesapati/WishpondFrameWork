@@ -16,6 +16,8 @@ public class GSigninPage {
 
 	By email = By.xpath("//input[@type='email']");
 	
+	By invalidEmail = By.xpath("//div[text()='Couldn’t find your Google Account']");
+	
 	By nextButton = By.xpath("//span[text()='Next']");
 	
 	public Boolean signinPageValidate()
@@ -30,5 +32,11 @@ public class GSigninPage {
 		Utility.WebElementwait(driver, nextButton).click();
 		GPwdPage gpwd = new GPwdPage(driver);
 		return gpwd;
+	}
+	
+	public String invalidGmail()
+	{
+		String text = Utility.WebElementwait(driver, invalidEmail).getText();
+		return text;
 	}
 }

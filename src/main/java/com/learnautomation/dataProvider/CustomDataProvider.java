@@ -15,6 +15,14 @@ public class CustomDataProvider {
 		
 	}
 	
+	@DataProvider(name="InvalidCredentials")
+	public static Object[][] test1b()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("InvalidCredentials");
+		return arr;
+		
+	}
 	
 	  @DataProvider(name="MerchantId")
 		
