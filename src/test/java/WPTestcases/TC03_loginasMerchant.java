@@ -1,4 +1,4 @@
-package testcases2;
+package WPTestcases;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -17,6 +17,7 @@ public class TC03_loginasMerchant  extends BaseClass{
 	Adminhomepage admin;
 	Merchant_Login results;
 	WPCentralPage Central;
+	
 	
 	@Test(priority=1,dataProvider = "MerchantId", dataProviderClass=CustomDataProvider.class)
 	//Searching of Merchant
