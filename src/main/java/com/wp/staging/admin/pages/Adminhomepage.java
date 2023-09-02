@@ -2,6 +2,8 @@ package com.wp.staging.admin.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.learnautomation.helper.Utility;
 
@@ -23,6 +25,34 @@ public class Adminhomepage {
 	By newSubscription = By.xpath("(//a[contains(@href,'subscription')])[2]");
 	
 	By doorman = By.xpath("//a[normalize-space()='Doorman']");
+	
+	By merchanttoggle = By.xpath("(//a[@class='dropdown-toggle'])[1]");
+	
+	By usersLink = By.xpath("//a[text()='Users']");
+	
+	By userslink2 = By.xpath("//a[text()='Users']");
+	
+	By logout = By.xpath("//a[contains(@href,'logout')]");
+	
+
+	
+	public void users()
+	{
+		Actions act = new Actions(driver);
+		WebElement merchantlink = Utility.WebElementwait(driver, merchanttoggle);
+		act.moveToElement(merchantlink).perform();
+	}
+	
+	public void logout()
+	{
+		Utility.WebElementwait(driver, logout).click();
+	}
+	
+	public void userslink()
+	{
+		Utility.WebElementwait(driver, userslink2).click();
+	}
+	
 	
 	public Boolean wishpondLogo()
 	{

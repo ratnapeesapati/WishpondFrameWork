@@ -4,6 +4,7 @@ import org.testng.annotations.DataProvider;
 
 
 
+
 public class CustomDataProvider {
 	
 	@DataProvider(name="Credentials")
@@ -60,6 +61,7 @@ public class CustomDataProvider {
 		
 	}
 	
+	
 	@DataProvider(name="Campaign")
 	public static Object[][] test5()
 	{
@@ -86,5 +88,25 @@ public class CustomDataProvider {
 		return arr;
 		
 	}
+	
+	@DataProvider(name="NewUser1")
+	public static Object[][] test8()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("NewUser");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="Filter")
+	public static Object[][] test9()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("Filter");
+		return arr;
+		
+	}
+	
+
 	
 }

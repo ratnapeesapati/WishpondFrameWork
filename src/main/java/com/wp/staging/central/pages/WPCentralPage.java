@@ -1,5 +1,7 @@
 package com.wp.staging.central.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -46,6 +48,31 @@ public class WPCentralPage {
 	
 	By invalidMerchant = By.xpath("//div[@class=' alert alert-info']");
 	
+	By filters = By.xpath("(//div[contains(@class,'filter')])[8]/span");
+	
+	By filtercheckbox = By.xpath("(//ul[@class='email-dashboard__filter-wrapper'])[2]/li/div/div/label/span[contains(@class,'ng-binding')]");
+	
+
+	public void filters()
+	{
+		Utility.WebElementwait(driver, filters).click();
+	}
+	
+	public void filtercheckbox(String filtervalue)
+	{
+		List<WebElement> list1 = driver.findElements(filtercheckbox);
+		for(WebElement abc : list1)
+		{
+			String value = abc.getText();
+			if(value.contains(filtervalue))
+			{
+				abc.click();
+				break;
+			}
+			
+		}
+		
+	}
 	
 	
 	
