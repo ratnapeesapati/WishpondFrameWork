@@ -9,17 +9,7 @@
 	 
  </listeners>
  
-<test thread-count="5" name="Temp">
-	
-	 <classes> 
-	  <class name="WPTestcases.TC01_verifyURL"/>
-      <class name="WPTestcases.TC02_SigninviaGmail"></class>
-      <class name="WPTestcases.TC17_CreateUser"></class>
-      
-      </classes>
-      
-</test>
-		 
+
 	 
   
  
