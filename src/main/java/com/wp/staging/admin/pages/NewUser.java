@@ -37,6 +37,14 @@ public class NewUser {
 	By usertypeoption = By.xpath("//select[@name='user[user_type]']/option[@value='20']");
 	
 	By usersuccessmsg = By.xpath("//div[@level='success']");
+	
+	By userrepeatmsg = By.xpath("//span[@class='help-block']");
+	
+	public String userRepeat()
+	{
+		String msg = Utility.WebElementwait(driver, userrepeatmsg).getText();
+		return msg;
+	}
 
 	public void usertype()
 	{

@@ -53,6 +53,19 @@ public class TC17_CreateUser extends BaseClass
 		
 	}
 	
+	@Test(priority=3, dataProvider = "NewUser1", dataProviderClass = CustomDataProvider.class)
+	public void newUserRepeat(String Firstname, String lastname, String email, String pass, String confirmpass, String usercreatedmsg)
+	{
+		admin.users();
+	    admin.userslink();
+	    user.createuser();
+		newuser.createUser(Firstname, lastname, email, pass, confirmpass);
+		newuser.usertype();
+		newuser.create();
+		Assert.assertTrue(newuser.userRepeat().contains("has already been taken"));
+		
+	}
+	
 	
 	
 	
