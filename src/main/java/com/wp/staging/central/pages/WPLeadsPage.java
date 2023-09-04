@@ -1,9 +1,13 @@
 package com.wp.staging.central.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.learnautomation.helper.Utility;
 
@@ -46,11 +50,27 @@ public class WPLeadsPage {
 	
 	By search = By.xpath("//input[@placeholder='Search by email']");
 	
-	By leadrecordvalidate = By.xpath("(//a[contains(@href,'central/leads')])[6]/span");
+	By leadrecordvalidate = By.xpath("(//span[@display-name='lead'])[1]");
 	
 	By leadProfile = By.xpath("//a[normalize-space()='Profile']");
 	
+	By searchLead = By.xpath("//input[@placeholder='Search by email']");
 	
+	By leadResult = By.xpath("//a[contains(@href,'central/leads')]/span");
+	
+	By leadDeletecheckbox = By.xpath("(//input[@type='checkbox'])[2]");
+	
+	By actionsDropDown = By.xpath("(//i[contains(@class,'caret-down')])[1]");
+	
+	By deleteLead = By.xpath("(//li[contains(@uib-tooltip,'delete')]/a)[1]");
+	
+	By duplicateLeadmsg = By.xpath("//div[text()='A Lead with this Email already exists']");
+	
+	By leadDelMsg = By.xpath("(//div[contains(@class,'success')]/i)[1]");
+	
+	By leadSettings = By.xpath("//div[@class='dropdown-toggle'])[1]");
+	
+	By leadEdit = By.xpath("//li[normalize-space()='Edit']");
 	
 	
 	public Boolean leadsPageVerify()
@@ -76,14 +96,20 @@ public class WPLeadsPage {
 	
 	public String newLeadvalidate()
    {
+	WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
+	wait1.until(ExpectedConditions.visibilityOfElementLocated(leadrecordvalidate));
+     String text = Utility.WebDriverWait(driver, leadrecordvalidate).getText();
+      return text;
+	}
 	
-  String text = Utility.WebDriverWait(driver, leadrecordvalidate).getText();
-  return text;
+	public void leadRecordClick()
+	{
+		Utility.WebDriverWait(driver, leadrecordvalidate).click();
 	}
 	
 	public void leadProfile()
 	{
-		Utility.WebElementwait(driver, leadProfile).click();
+	  Utility.JSclick(driver, leadProfile);
 	}
 	
 	public String leadFirstName()
@@ -98,6 +124,41 @@ public class WPLeadsPage {
 		return lastname;
 	}
 	
+	public void leadSearch(String leademail)
+	{
+		Utility.JSclick(driver, searchLead);
 	}
-
-
+	
+	public String leadResult()
+	{
+		String text = Utility.WebDriverWait(driver, leadResult).getText();
+		return text;
+	}
+	
+	public void leadDelete()
+	{
+       Utility.JSclick(driver, leadDeletecheckbox);
+		Utility.JSclick(driver, actionsDropDown);
+		Utility.JSclick(driver, deleteLead);
+		driver.switchTo().alert().accept();
+	}
+	
+	public Boolean leadDeleteCheck()
+	{
+		Boolean msg = Utility.WebElementwait(driver, leadDelMsg).isDisplayed();
+		return msg;
+	}
+	
+	
+	public Boolean leadDuplicate()
+	{
+		Boolean msg = Utility.WebElementwait(driver, duplicateLeadmsg).isDisplayed();
+		return msg;
+	}
+	
+	public void leadEdit()
+	{
+		Utility.JSclick(driver, leadSettings);
+		Utility.WebElementwait(driver, leadEdit).click();
+	}
+	}
