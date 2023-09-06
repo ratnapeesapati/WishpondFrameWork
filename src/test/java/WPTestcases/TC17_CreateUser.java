@@ -1,4 +1,4 @@
-package testcases2;
+package WPTestcases;
 
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -64,6 +64,18 @@ public class TC17_CreateUser extends BaseClass
 		newuser.create();
 		Assert.assertTrue(newuser.userRepeat().contains("has already been taken"));
 		
+	}
+	
+	
+	@Test(priority=4, dataProvider = "NewUserNegative", dataProviderClass = CustomDataProvider.class)
+	public void newUserNegative( String firstname,String lastname, String email,String pass, String confirmpass)
+	{
+		admin.users();
+		admin.userslink();
+		user.createuser();
+		newuser.createUserNegative(firstname,lastname, email,pass, confirmpass);
+		newuser.create();
+		Assert.assertTrue(newuser.userTypemsg().contains("can't be blank"));
 	}
 	
 	

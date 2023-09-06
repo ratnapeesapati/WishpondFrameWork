@@ -20,7 +20,7 @@ public class ExcelReader {
 		
 
 		try {
-			wb = new XSSFWorkbook(new FileInputStream(new File(System.getProperty("user.dir") + "/TestData/excel/TestFile.xlsx")));
+			wb = new XSSFWorkbook(new FileInputStream(new File(System.getProperty("user.dir") + "/TestData/excel/TestFileUpdated.xlsx")));
 		} catch (FileNotFoundException e) {
 			System.out.println("File not Found" + e.getMessage());
 		} catch (IOException e) {

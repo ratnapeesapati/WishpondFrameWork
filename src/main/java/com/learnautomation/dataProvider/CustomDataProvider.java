@@ -4,6 +4,7 @@ import org.testng.annotations.DataProvider;
 
 
 
+
 public class CustomDataProvider {
 	
 	@DataProvider(name="Credentials")
@@ -15,6 +16,14 @@ public class CustomDataProvider {
 		
 	}
 	
+	@DataProvider(name="InvalidCredentials")
+	public static Object[][] test1b()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("InvalidCredentials");
+		return arr;
+		
+	}
 	
 	  @DataProvider(name="MerchantId")
 		
@@ -24,6 +33,15 @@ public class CustomDataProvider {
 		  return arr;
 		  
 		  }
+	  
+	  @DataProvider(name="InvalidMerchantId")
+		
+	  public static Object[][] test2a() {
+	  
+	  Object arr[][] = ExcelReader.getDataFromSheet("invalidmerchantid"); 
+	  return arr;
+	  
+	  }
 		 
 	@DataProvider(name="PlanId")
 	public static Object[][] test3()
@@ -43,6 +61,7 @@ public class CustomDataProvider {
 		
 	}
 	
+	
 	@DataProvider(name="Campaign")
 	public static Object[][] test5()
 	{
@@ -61,5 +80,41 @@ public class CustomDataProvider {
 		
 	}
 	
+	@DataProvider(name="LeadSearch")
+	public static Object[][] test7()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("LeadSearch");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="NewUser1")
+	public static Object[][] test8()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("NewUser");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="Filter")
+	public static Object[][] test9()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("Filter");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="NewUserNegative")
+	public static Object[][] test10()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("NewUserNegative");
+		return arr;
+		
+	}
+
 	
 }

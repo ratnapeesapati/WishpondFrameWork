@@ -9,53 +9,64 @@
 	 
  </listeners>
  
-
- 
-    <test name="FolderCreation">
-    
+   	
+<test thread-count="5" name="Doorman">
     <classes>
-		<class name="testcases2.TC02_SigninviaGmail"/>
-		<class name="testcases2.TC03_loginasMerchant"></class>
-		<class name="testcases2.TC05_CreateFolder"></class>
-		
-		
-	</classes>
-	
-	</test>
-	
-	<test name="EmailAutomation">
-		
-		<classes>
-		<class name="testcases2.TC02_SigninviaGmail"/>
-		<class name="testcases2.TC03_loginasMerchant"></class>
-		<class name="testcases2.TC07_EmailAutomation"></class>
-			
-		</classes>
-		
-		
-		
-		
-		
-	</test>
-	
-	 
-  <test thread-count="5" name="Leads">
-	  
-	 
-    <classes>
-      <class name="testcases2.TC01_verifyURL"/>
-      <class name="testcases2.TC02_SigninviaGmail"></class>
-      <class name="testcases2.TC03_loginasMerchant"></class>
-      <class name="testcases2.TC04_Leads"></class>
-      
+      <class name="WPTestcases.TC02_SigninviaGmail"/>
+      <class name="WPTestcases.TC13_SearchMerchant"></class>
+      <class name="WPTestcases.TC12_Doorman"></class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
    
-    
+  <test thread-count="5" name="ReturntoAdmin">
+    <classes>
+      <class name="WPTestcases.TC02_SigninviaGmail"/>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC16_ReturntoAdmin"></class>
      
     </classes>
-    </test> 
-	 
-	
+    
 
+     
+   
+  </test> <!-- Test -->
+  
+     <test thread-count="5" name="InvalidMerchant">
+	  
+   <classes>
+      <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03b_InvalidMerchant"></class>
+      
+   </classes>
+   
+   
+    </test> 
+    
+      <test thread-count="5" name="InvalidGmail">
+	  
+   <classes>
+      <class name="testcases2.TC01_verifyURL"/>
+      <class name="testcases2.TC02b_InvalidGmail"></class>
+      
+      
+   </classes>
+   
+   
+    </test> 
+    
+    <test thread-count="5" name="Temp">
+	
+	 <classes> 
+	  <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC17_CreateUser"></class>
+      
+      </classes>
+      
+</test>
   
     
 </suite> 
