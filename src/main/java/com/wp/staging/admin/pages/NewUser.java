@@ -36,7 +36,7 @@ public class NewUser {
 	
 	By userrepeatmsg = By.xpath("//span[@class='help-block']");
 	
-	By usertypemsg = By.xpath("//span[text()='can't be blank']");
+	By usertypemsg = By.xpath("//select[@name='user[user_type]']//following::span");
 	
 	
 	public void createUserNegative(String firstname,String lastname,String useremail, String pass, String passconfirm)
