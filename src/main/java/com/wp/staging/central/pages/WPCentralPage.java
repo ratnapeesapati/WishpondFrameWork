@@ -50,8 +50,19 @@ By invalidMerchant = By.xpath("//div[@class=' alert alert-info']");
 	
 	By filters = By.xpath("(//div[contains(@class,'filter')])[8]/span");
 	
+	By settings = By.xpath("//a[text()='Account Settings']");
+	
 	By filtercheckbox = By.xpath("(//ul[@class='email-dashboard__filter-wrapper'])[2]/li/div/div/label/span[contains(@class,'ng-binding')]");
 	
+  public void accountSettings()
+  {
+	  Utility.WebElementwait(driver, merchantName).click();
+  }
+  
+  public void accountSettings2()
+  {
+	  Utility.JSclick(driver, settings);
+  }
 	
 	public void filters()
 	{

@@ -38,7 +38,6 @@
    <classes>
       <class name="WPTestcases.TC01_verifyURL"/>
       <class name="WPTestcases.TC02_SigninviaGmail"></class>
-      <class name="WPTestcases.TC03b_InvalidMerchant"></class>
       
    </classes>
    
@@ -48,8 +47,8 @@
       <test thread-count="5" name="InvalidGmail">
 	  
    <classes>
-      <class name="testcases2.TC01_verifyURL"/>
-      <class name="testcases2.TC02b_InvalidGmail"></class>
+      <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02b_InvalidGmail"></class>
       
       
    </classes>
@@ -66,7 +65,8 @@
       
       </classes>
       
-</test>
+
+    </test>
   
     
 </suite> 
