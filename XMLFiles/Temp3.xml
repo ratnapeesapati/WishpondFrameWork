@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ 
+  <listeners>
+	 
+	 <listener class-name="com.learnautomation.listener.ExtentTestNGITestListener"></listener>
+	 
+	 
+ </listeners>
+ 
+ <test thread-count="5" name="Temp">
+	
+	 <classes> 
+	  <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC21_PhotoContest"></class>
+      
+      </classes>
+      
+</test>
+		 
+	 
+  
+ 
+  
+  
+</suite> <!-- Suite -->

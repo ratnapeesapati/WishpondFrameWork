@@ -54,6 +54,25 @@ By invalidMerchant = By.xpath("//div[@class=' alert alert-info']");
 	
 	By filtercheckbox = By.xpath("(//ul[@class='email-dashboard__filter-wrapper'])[2]/li/div/div/label/span[contains(@class,'ng-binding')]");
 	
+	By plansBilling = By.xpath("//li[@class='billing-dropdown-submenu-left']");
+	
+	By plans = By.xpath("//a[text()='Plans']");
+	
+	By photoContestClick = By.xpath("(//a[@data-product-name='Photo Contest'])[1]");
+	
+	public void photoContest()
+	{
+		Utility.WebElementwait(driver, viewMoreButton).click();
+		Utility.JSclick(driver, photoContestClick);
+	}
+	
+	public void plans()
+	{
+		Utility.JSclick(driver, merchantName);
+		Utility.JSclick(driver, plansBilling);
+		Utility.JSclick(driver, plans);
+	}
+	
   public void accountSettings()
   {
 	  Utility.WebElementwait(driver, merchantName).click();

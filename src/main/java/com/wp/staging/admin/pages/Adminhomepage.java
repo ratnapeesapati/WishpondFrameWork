@@ -34,6 +34,15 @@ By merchanttoggle = By.xpath("(//a[@class='dropdown-toggle'])[1]");
 	
 	By logout = By.xpath("//a[contains(@href,'logout')]");
 	
+	By currentPricingPlan = By.xpath("(//a[contains(@href,'pricing_plans')])[3]");
+	
+	public String currentPricingPlan()
+	{
+		String text = Utility.WebElementwait(driver, currentPricingPlan).getText();
+		return text;
+		
+	}
+	
 
 	public void users()
 	{
@@ -51,6 +60,8 @@ By merchanttoggle = By.xpath("(//a[@class='dropdown-toggle'])[1]");
 	{
 		Utility.WebElementwait(driver, userslink2).click();
 	}
+	
+	
 	
 	
 	
