@@ -56,7 +56,7 @@
    
     </test> 
     
-    <test thread-count="5" name="Temp">
+    <test thread-count="5" name="CreateUser">
 	
 	 <classes> 
 	  <class name="WPTestcases.TC01_verifyURL"/>
@@ -68,7 +68,7 @@
 
     </test>
     
-    <test thread-count="5" name="Temp">
+    <test thread-count="5" name="Plans">
 	
 	 <classes> 
 	  <class name="WPTestcases.TC01_verifyURL"/>
