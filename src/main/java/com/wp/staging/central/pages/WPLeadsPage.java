@@ -72,6 +72,20 @@ public class WPLeadsPage {
 	
 	By leadEdit = By.xpath("//li[normalize-space()='Edit']");
 	
+	By listsPage = By.xpath("//a[contains(@href,'lists')]");
+	
+	By createListLink = By.xpath("(//a[contains(@href,'lists')])[2]");
+	
+	public void listsPage()
+	{
+		Utility.WebElementwait(driver, listsPage).click();
+	}
+	
+	public boolean listsPageCheck()
+	{
+		Boolean status = Utility.WebElementwait(driver, createListLink).isDisplayed();
+		return status;
+	}
 	
 	public Boolean leadsPageVerify()
 	{

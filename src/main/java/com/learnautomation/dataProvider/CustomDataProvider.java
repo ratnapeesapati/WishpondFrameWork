@@ -116,5 +116,22 @@ public class CustomDataProvider {
 		
 	}
 
+	@DataProvider(name="ListName")
+	public static Object[][] test11()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("ListName");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="ExpectedListName")
+	public static Object[][] test12()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("ExpectedListName");
+		return arr;
+		
+	}
 	
 }
