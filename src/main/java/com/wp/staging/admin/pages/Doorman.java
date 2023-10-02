@@ -18,9 +18,11 @@ public class Doorman {
   
   By addFeatureButton = By.xpath("(//input[@type='submit'])[2]");
   
-  By websiteDoormanCheck = By.xpath("//input[@value='Remove: website_builder']");
+  By doormanCheck = By.xpath("(//input[@type='submit'])[3]");
   
   By successMsg = By.xpath("//div[@level='success']");
+  
+  By loginasMerchant = By.xpath("//a[text()='Login as this merchant']");
   
   public void doorman(String doormankey)
   {
@@ -30,7 +32,7 @@ public class Doorman {
   
   public String doormancheck(String doormanvalidate)
   {
-	  String text = Utility.WebElementwait(driver, websiteDoormanCheck).getAttribute("value");
+	  String text = Utility.WebElementwait(driver, doormanCheck).getAttribute("value");
 	  return text;
   }
   
@@ -38,6 +40,11 @@ public class Doorman {
   {
 	  String text =Utility.WebElementwait(driver, successMsg).getAttribute("innerHTML");
 	  return text;
+  }
+  
+  public void login()
+  {
+	  Utility.WebElementwait(driver, loginasMerchant).click();
   }
 	
   

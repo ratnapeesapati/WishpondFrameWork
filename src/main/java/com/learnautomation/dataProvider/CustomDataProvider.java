@@ -134,4 +134,40 @@ public class CustomDataProvider {
 		
 	}
 	
+	@DataProvider(name="NewListName")
+	public static Object[][] test13()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("NewListName");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="LeadScore")
+	public static Object[][] test14()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("LeadScore");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="Newsletter")
+	public static Object[][] test15()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("Newsletter");
+		return arr;
+		
+	}
+	
+	@DataProvider(name="FromPanel")
+	public static Object[][] test16()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("FromPanel");
+		return arr;
+		
+	}
+	
 }

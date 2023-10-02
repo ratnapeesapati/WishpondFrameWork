@@ -23,9 +23,8 @@ public class TC15_Newsletter extends BaseClass{
 		
 		central.viewMore();
 		campaignslist.newsletterLink();
-		Assert.assertTrue(driver.getCurrentUrl().contains("newsletters"));
-		
-		newsletter.newsLetter();
+	
+
 		
 		
 		

@@ -47,7 +47,27 @@ public class TC22_StaticList extends BaseClass{
 		listspage.listIdentify(expectedlistname);
 	}
 	
+	@Test(priority=2,dataProvider = "ListName", dataProviderClass = CustomDataProvider.class)
+	public void listDeleteNegative(String listname)
+	{
+		listspage.listSearch(listname);
+		listspage.listDeleteNegative();
+		Assert.assertTrue(listspage.listResult().equalsIgnoreCase(listname));
+	}
 	
 	
+   @Test(priority=3,dataProvider = "ListName", dataProviderClass = CustomDataProvider.class)
+	public void listSearch(String listname)
+	{
+	   driver.navigate().refresh();
+		listspage.listSearch(listname);
+		Assert.assertTrue(listspage.listResult().equalsIgnoreCase(listname));
+		listspage.listSelect();
+		driver.navigate().refresh();
+		listspage.listSearch(listname);
+		Assert.assertTrue(listspage.listTotal().equalsIgnoreCase("Total Lists: 0"));
+	}
+	
+
 
 }

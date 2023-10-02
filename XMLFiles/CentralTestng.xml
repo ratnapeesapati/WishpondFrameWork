@@ -80,7 +80,7 @@
       
 </test>
 
- <test thread-count="5" name="Temp">
+ <test thread-count="5" name="List">
 	
 	 <classes> 
 	  <class name="WPTestcases.TC01_verifyURL"/>
@@ -92,5 +92,59 @@
       
 </test>
   
+  
+   <test thread-count="5" name="RenameList">
+	
+	 <classes> 
+	  <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC23_RenameList"></class>
+      
+      </classes>
+      
+</test>
+
+<test thread-count="5" name="LeadAddition and Search">
+
+	 <classes> 
+	  <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC04a_LeadAddition"></class>
+	 
+  
+ </classes>
+ 
+</test>
+
+<test thread-count="5" name="LeadAddition and Search">
+
+	 <classes> 
+	  <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC04c_LeadDuplicate"></class>
+	 
+  
+ </classes>
+ 
+</test>
+
+ 
+<test thread-count="5" name="LeadAddition and Search">
+
+	 <classes> 
+	  <class name="WPTestcases.TC01_verifyURL"/>
+      <class name="WPTestcases.TC02_SigninviaGmail"></class>
+      <class name="WPTestcases.TC03_loginasMerchant"></class>
+      <class name="WPTestcases.TC05_CreateFolder"></class>
+	 
+  
+ </classes>
+ 
+</test>
+  
+		 
     
 </suite> 

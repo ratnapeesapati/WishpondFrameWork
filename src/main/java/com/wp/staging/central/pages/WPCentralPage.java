@@ -60,6 +60,13 @@ By invalidMerchant = By.xpath("//div[@class=' alert alert-info']");
 	
 	By photoContestClick = By.xpath("(//a[@data-product-name='Photo Contest'])[1]");
 	
+	By regularNewsletterLink = By.xpath("//a[contains(@class,'create_newsletter')]");
+	
+	public void newsletter()
+	{
+		Utility.JSclick(driver, regularNewsletterLink);
+	}
+	
 	public void photoContest()
 	{
 		Utility.WebElementwait(driver, viewMoreButton).click();
@@ -118,6 +125,12 @@ By invalidMerchant = By.xpath("//div[@class=' alert alert-info']");
 		Utility.WebElementwait(driver, returntoAdminlink).click();
 	
 	}
+	
+	public String invalidMerchant()
+	  {
+		String text =  Utility.WebElementwait(driver, invalidMerchant).getText();
+		return text;
+	  }
 	
 	public String campaignResult()
 	{
