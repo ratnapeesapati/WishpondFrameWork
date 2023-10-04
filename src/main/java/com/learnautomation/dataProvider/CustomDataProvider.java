@@ -170,4 +170,13 @@ public class CustomDataProvider {
 		
 	}
 	
+	@DataProvider(name="SubjectPanel")
+	public static Object[][] test17()
+	{
+		
+		Object arr[][] = ExcelReader.getDataFromSheet("SubjectPanel");
+		return arr;
+		
+	}
+	
 }

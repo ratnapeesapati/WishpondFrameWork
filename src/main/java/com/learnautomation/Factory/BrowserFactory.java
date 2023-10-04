@@ -52,6 +52,10 @@ public class BrowserFactory{
 				}else if(browsername.equalsIgnoreCase("Firefox") || browsername.equalsIgnoreCase("Mozilla Firefox") || browsername.equalsIgnoreCase("FF"))
 		{
 			driver = new FirefoxDriver();
+			String username = "wishpond";
+			String password = "suchwow";
+			String URL = "https://" +username +":" +password +"@"+ "staging1.wishpond.com";
+			driver.get(URL);
 		}else if(browsername.equalsIgnoreCase("Safari"))
 		{
 			driver = new SafariDriver();
